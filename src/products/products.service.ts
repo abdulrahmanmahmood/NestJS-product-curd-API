@@ -40,4 +40,8 @@ export class ProductsService {
       },
     ];
   }
+
+  findOne(id: number): Product | undefined {
+    return this.findAll().find((product) => +product.id === id);
+  }
 }
